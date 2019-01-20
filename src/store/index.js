@@ -1,17 +1,18 @@
-import appReducer from '../reducers/index'
 import {
-    createReactNavigationReduxMiddleware
+  createReactNavigationReduxMiddleware,
 } from 'react-navigation-redux-helpers';
 import {
-    createStore,
-    applyMiddleware,
+  createStore,
+  applyMiddleware,
 } from 'redux';
+import appReducer from '../reducers/index';
+
 const middleware = createReactNavigationReduxMiddleware(
-    "root",
-    state => state.nav,
+  'root',
+  state => state.nav,
 );
 
-export default store = createStore(
-    appReducer,
-    applyMiddleware(middleware),
+export default createStore(
+  appReducer,
+  applyMiddleware(middleware),
 );

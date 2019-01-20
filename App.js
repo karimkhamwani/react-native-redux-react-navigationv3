@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { SafeAreaView } from 'react-native';
 import { Provider } from 'react-redux';
-import AppWithNavigationState from './src/navigation/index'
+import AppWithNavigationState from './src/navigation/index';
 import store from './src/store';
 
 console.disableYellowBox = true;
