@@ -1,25 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { SafeAreaView } from 'react-native';
-import { Button } from 'react-native-elements';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import AppWithNavigationState from './src/navigation/index';
-import store from './src/store';
+import { store, persistor } from './src/store';
 
 console.disableYellowBox = true;
 
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <SafeAreaView style={{ flex: 1 }}>
-          <AppWithNavigationState />
-          <Button
-            title="Solid Button"
-          />
-        </SafeAreaView>
-      </Provider>
-    );
-  }
-}
+const App = () => (
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <AppWithNavigationState />
+      </SafeAreaView>
+    </PersistGate>
+  </Provider>
+);
 
 export default App;
