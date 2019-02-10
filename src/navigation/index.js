@@ -13,5 +13,8 @@ const AppRoot = reduxifyNavigator(AppNavigator, 'root');
 const mapStateToProps = state => ({
   state: state.nav,
 });
+const mapDispatchToProps = dispatch => ({
+  dispatch,
+});
 
-export default connect(mapStateToProps)(AppRoot);
+export default connect(mapStateToProps, mapDispatchToProps)(AppRoot);
