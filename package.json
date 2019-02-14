@@ -8,20 +8,23 @@
     "lint": "eslint *.js **/*.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "native-base": "^2.11.0",
     "react": "16.6.3",
     "react-native": "0.55.4",
     "react-native-elements": "^1.0.0",
     "react-native-gesture-handler": "^1.0.12",
+    "react-native-i18n": "^2.0.15",
+    "react-native-restart": "^0.0.9",
     "react-native-vector-icons": "^6.2.0",
     "react-navigation": "^3.0.9",
     "react-navigation-redux-helpers": "^2.0.9",
     "react-redux": "^5.0.6",
     "redux": "^4.0.1",
-    "redux-persist": "^5.10.0",
-    "redux-thunk": "^2.2.0",
     "redux-axios-middleware": "^4.0.0",
-    "axios": "^0.18.0",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
